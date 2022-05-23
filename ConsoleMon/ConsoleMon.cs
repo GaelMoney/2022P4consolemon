@@ -11,6 +11,7 @@ namespace ConsoleMon
         int damage = 5;
         public int drain = 10;
         string name = "pikachu";
+        List<Skill> ListSkills = new List<Skill>();
 
         internal void TakeDamage(int damage)
         {
