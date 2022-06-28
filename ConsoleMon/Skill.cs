@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleMon
 {
-    class Skill
+    public class Skill
     {
         int damage = 10;
         int energyCost = 25;
@@ -13,6 +13,21 @@ namespace ConsoleMon
         {
             target.TakeDamage(damage);
             caster.DepleteEnergy(energyCost);
+            
         }
+        internal Skill()
+        {
+            
+            
+            
+        }
+        internal Skill(Skill copyFrom) //je kan ook gebruik maken van reflection inplaats van "copyFrom"
+        {
+            this.damage = copyFrom.damage;
+            this.energyCost = copyFrom.energyCost;
+            this.name = copyFrom.name;
+
+        }
+
     }
 }

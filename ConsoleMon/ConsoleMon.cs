@@ -4,14 +4,14 @@ using System.Text;
 
 namespace ConsoleMon
 {
-    class ConsoleMon
+     class ConsoleMon
     {
-        int hp = 100;
+        public int hp = 100;
         int energy = 120;
         int damage = 5;
         public int drain = 10;
         string name = "pikachu";
-        List<Skill> ListSkills = new List<Skill>();
+        public List<Skill> ListSkills = new List<Skill>();
 
         internal void TakeDamage(int damage)
         {
@@ -21,6 +21,19 @@ namespace ConsoleMon
         internal void DepleteEnergy(int drain)
         {
             energy = energy - drain;
+        }
+        internal ConsoleMon()
+        {
+
+        }
+        internal ConsoleMon(ConsoleMon copyFrom)
+        {
+            this.hp = copyFrom.hp;
+            this.energy = copyFrom.energy;
+            this.damage = copyFrom.damage;
+            this.drain = copyFrom.drain;
+            this.name = copyFrom.name;
+
         }
     }
 }
