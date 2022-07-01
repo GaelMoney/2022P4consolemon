@@ -6,6 +6,7 @@ namespace ConsoleMon
 {
     public class Skill
     {
+        Elements element;
         int damage = 10;
         int energyCost = 25;
         string name = "LightningBall";
@@ -15,9 +16,10 @@ namespace ConsoleMon
             caster.DepleteEnergy(energyCost);
             
         }
-        internal Skill()
+        internal Skill(string aName, int someDamage)
         {
-            
+            name = aName;
+            damage = someDamage;
             
             
         }

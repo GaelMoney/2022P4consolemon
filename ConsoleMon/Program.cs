@@ -7,20 +7,22 @@ namespace ConsoleMon
     {
         static void Main(string[] args)
         {
-            ConsoleMon a = new ConsoleMon();
+            ConsoleMon a = new ConsoleMon(250, "Lucario");
 
-            ConsoleMon b = new ConsoleMon();
+            ConsoleMon b = new ConsoleMon(300, "Pikachu");
 
-            Skill fire = new Skill();
-            Skill water = new Skill();
-            Skill lightning = new Skill();
-            Skill shadow = new Skill();
+            Skill blackbolt = new Skill("blackbolt", 30);
+            Skill blacklightning = new Skill("blacklightning", 20);
+            Skill blackstring = new Skill("blackstring", 13);
+            Skill blackfire = new Skill("blackfire", 50);
 
-            a.ListSkills.Add(fire);
-            a.ListSkills.Add(water);
+            
+            
+            a.ListSkills.Add(blackbolt);
+            a.ListSkills.Add(blacklightning);
 
-            b.ListSkills.Add(lightning);
-            b.ListSkills.Add(shadow);
+            b.ListSkills.Add(blackstring);
+            b.ListSkills.Add(blackfire);
 
             ConsoleMonArena arena = new ConsoleMonArena();
             arena.DoBattle(a, b);

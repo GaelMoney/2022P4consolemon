@@ -4,8 +4,17 @@ using System.Text;
 
 namespace ConsoleMon
 {
-     class ConsoleMon
+    enum Elements
     {
+        Fire = 1,
+        Water = 2,
+        Wind = 3,
+        Earth = 4,
+
+    }
+    class ConsoleMon
+    {
+        Elements weakness;
         public int hp = 100;
         int energy = 120;
         int damage = 5;
@@ -25,6 +34,12 @@ namespace ConsoleMon
         internal ConsoleMon()
         {
 
+        }
+
+        internal ConsoleMon(int isHealth, string aName)
+        {
+            hp = isHealth;
+            name = aName;
         }
         internal ConsoleMon(ConsoleMon copyFrom)
         {
